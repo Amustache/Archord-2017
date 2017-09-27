@@ -1,0 +1,44 @@
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of tb_adder_combinatorial.vhd failed with 1 errors.
+# Compile of tb_adder_sequential.vhd failed with 1 errors.
+# 5 compiles, 2 failed with 2 errors.
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of tb_adder_combinatorial.vhd failed with 1 errors.
+# Compile of tb_adder_sequential.vhd failed with 1 errors.
+# 5 compiles, 2 failed with 2 errors.
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of tb_adder_combinatorial.vhd was successful.
+# Compile of tb_adder_sequential.vhd failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+vsim -gui work.adder_combinatorial
+# vsim -gui work.adder_combinatorial 
+# Start time: 10:34:49 on Sep 27,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.adder_combinatorial(ripple_carry)
+# ** Fatal: (vsim-3350) Generic "N_BITS" has not been given a value.
+#    Time: 0 ps  Iteration: 0  Instance: /adder_combinatorial File: C:/Users/Stache/Desktop/Archord/Lab/lab0/Template-20170926/vhdl/adder_combinatorial.vhd Line: 16
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 10:34:50 on Sep 27,2017, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vsim -gui work.adder_combinatorial
+# vsim -gui work.adder_combinatorial 
+# Start time: 10:37:13 on Sep 27,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.adder_combinatorial(ripple_carry)
+# ** Fatal: (vsim-3350) Generic "N_BITS" has not been given a value.
+#    Time: 0 ps  Iteration: 0  Instance: /adder_combinatorial File: C:/Users/Stache/Desktop/Archord/Lab/lab0/Template-20170926/vhdl/adder_combinatorial.vhd Line: 16
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 10:37:14 on Sep 27,2017, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
