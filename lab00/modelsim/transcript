@@ -1,9 +1,3 @@
-# Compile of tb_adder_combinatorial.vhd failed with 4 errors.
-# Compile of tb_adder_sequential.vhd failed with 1 errors.
-# Compile of adder_combinatorial.vhd failed with 4 errors.
-# Compile of adder_sequential.vhd failed with 4 errors.
-# Compile of full_adder.vhd was successful.
-# 5 compiles, 4 failed with 13 errors.
 # Compile of tb_adder_combinatorial.vhd was successful.
 # Compile of tb_adder_sequential.vhd failed with 1 errors.
 # Compile of adder_combinatorial.vhd was successful.
@@ -11,21 +5,121 @@
 # Compile of full_adder.vhd was successful.
 # 5 compiles, 1 failed with 1 error.
 # Compile of tb_adder_combinatorial.vhd was successful.
-# Compile of tb_adder_sequential.vhd failed with 1 errors.
-# Compile of adder_combinatorial.vhd was successful.
-# Compile of adder_sequential.vhd was successful.
-# Compile of full_adder.vhd was successful.
-# 5 compiles, 1 failed with 1 error.
-vsim -gui work.adder_combinatorial
-# vsim -gui work.adder_combinatorial 
-# Start time: 10:58:44 on Sep 27,2017
+vsim -gui work.tb_adder_combinatorial
+# vsim -gui work.tb_adder_combinatorial 
+# Start time: 09:38:54 on Sep 28,2017
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_adder_combinatorial(test)
 # Loading work.adder_combinatorial(ripple_carry)
-# ** Fatal: (vsim-3350) Generic "N_BITS" has not been given a value.
-#    Time: 0 ps  Iteration: 0  Instance: /adder_combinatorial File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab0/Template-20170926/vhdl/adder_combinatorial.vhd Line: 16
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 10:58:44 on Sep 27,2017, Elapsed time: 0:00:00
+# Loading work.full_adder(rtl)
+add wave sim:/tb_adder_combinatorial/*
+restart -f; run 600 ns;
+run -all
+restart -f
+run -all
+stop
+# Compile of tb_adder_combinatorial.vhd was successful.
+# Compile of tb_adder_sequential.vhd failed with 1 errors.
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# 5 compiles, 1 failed with 1 error.
+restart -f
+# Loading work.tb_adder_combinatorial(test)
+# Loading work.adder_combinatorial(ripple_carry)
+# Loading work.full_adder(rtl)
+run -all
+# Compile of tb_adder_combinatorial.vhd was successful.
+# Compile of tb_adder_sequential.vhd failed with 1 errors.
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# 5 compiles, 1 failed with 1 error.
+restart -f
+# Loading work.tb_adder_combinatorial(test)
+# Loading work.adder_combinatorial(ripple_carry)
+# Loading work.full_adder(rtl)
+run -all
+# Compile of tb_adder_combinatorial.vhd was successful.
+# Compile of tb_adder_sequential.vhd failed with 1 errors.
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# 5 compiles, 1 failed with 1 error.
+restart -f
+# Loading work.tb_adder_combinatorial(test)
+# Loading work.adder_combinatorial(ripple_carry)
+# Loading work.full_adder(rtl)
+run -all
+# Compile of tb_adder_combinatorial.vhd was successful.
+# Compile of tb_adder_sequential.vhd failed with 1 errors.
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# 5 compiles, 1 failed with 1 error.
+restart -f
+# Loading work.tb_adder_combinatorial(test)
+# Loading work.adder_combinatorial(ripple_carry)
+# Loading work.full_adder(rtl)
+run -all
+# ** Error: Unexpected result: OP1 = 10; OP2 = 13; SUM = 23; SUM_expected = 22
+#    Time: 500 ns  Iteration: 0  Instance: /tb_adder_combinatorial
+# Compile of tb_adder_combinatorial.vhd was successful.
+# Compile of tb_adder_sequential.vhd failed with 4 errors.
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# 5 compiles, 1 failed with 4 errors.
+# Compile of tb_adder_combinatorial.vhd was successful.
+# Compile of tb_adder_sequential.vhd failed with 4 errors.
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# 5 compiles, 1 failed with 4 errors.
+# Compile of tb_adder_combinatorial.vhd was successful.
+# Compile of tb_adder_sequential.vhd failed with 24 errors.
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# 5 compiles, 1 failed with 24 errors.
+# Compile of tb_adder_combinatorial.vhd was successful.
+# Compile of tb_adder_sequential.vhd failed with 22 errors.
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# 5 compiles, 1 failed with 22 errors.
+# Compile of tb_adder_combinatorial.vhd was successful.
+# Compile of tb_adder_sequential.vhd was successful.
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.tb_adder_sequential
+# End time: 11:28:05 on Sep 28,2017, Elapsed time: 1:49:11
 # Errors: 1, Warnings: 0
+# vsim -gui work.tb_adder_sequential 
+# Start time: 11:28:06 on Sep 28,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_adder_sequential(test)
+# Loading work.adder_sequential(rtl)
+# Loading work.full_adder(rtl)
+add wave sim:/tb_adder_sequential/*
+restart -f; run 2000 ns;
+# Compile of tb_adder_combinatorial.vhd was successful.
+# Compile of tb_adder_sequential.vhd was successful.
+# Compile of adder_combinatorial.vhd was successful.
+# Compile of adder_sequential.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f; run -all;
+# Loading work.tb_adder_sequential(test)
+# Loading work.adder_sequential(rtl)
+# Loading work.full_adder(rtl)
+# End time: 11:40:01 on Sep 28,2017, Elapsed time: 0:11:55
+# Errors: 0, Warnings: 0
