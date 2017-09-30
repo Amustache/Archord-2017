@@ -12,4 +12,9 @@ end logic_unit;
 
 architecture synth of logic_unit is
 begin
+	with op select r <=
+		(a nor b) when "00",
+		(a and b) when "01",
+		(a or b)  when "10",
+		(a xor b) when "11";
 end synth;

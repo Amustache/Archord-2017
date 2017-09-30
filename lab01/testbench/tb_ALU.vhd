@@ -76,9 +76,22 @@ begin
                             -- comparator
                             when "011" =>
 ---------------------------------------MODIFY HERE-------------------------------------------------------------
-				ASSERT FALSE
-					REPORT "Replace this ASSERT with the code to test the comparator"
-                			SEVERITY ERROR;
+                                expected := std_logic_vector(signed(a) - signed(b)); -- Diff
+                                case op(2 downto 0) is
+                                    when "001"  => test := (not(a(31)) and b(31)) or (not(expected(31)) and (not(a(31)) xor b(31)));
+                                    when "010"  => test := (a(31) and not(b(31))) or (expected(31) and (not(a(31)) xor b(31)));
+                                    when "011"  => test := expected /= 0;
+                                    when "100"  => test := expected = 0;
+                                    when "101"  => test := ;
+                                    when "110"  => test := ;
+                                    -- "000" and "111" ignored
+                                    when others => test := expected = 0;
+                                end case;
+                                if(test) then
+                                    expected := std_logic_vector(signed(1));
+                                else
+                                    expected := std_logic_vector(signed(0))
+                                end if;
 ---------------------------------------END MODIFY--------------------------------------------------------------
                             -- "010" is not valid -> ignore
                             -- logical unit
