@@ -13,4 +13,5 @@ end shift_unit;
 
 architecture synth of shift_unit is
 begin
+	
 end synth;

@@ -16,5 +16,6 @@ begin
 		(a nor b) when "00",
 		(a and b) when "01",
 		(a or b)  when "10",
-		(a xor b) when "11";
+		(a xor b) when "11",
+		(a and b) when others; -- Undefined
 end synth;

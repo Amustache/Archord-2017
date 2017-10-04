@@ -16,10 +16,12 @@ end comparator;
 architecture synth of comparator is
 begin
 	with op select r <=
-		(not(a(31)) and b(31)) or (not(expected(31)) and (not(a(31)) xor b(31))) when "001",
-		(a(31) and not(b(31))) or (expected(31) and (not(a(31)) xor b(31))) when "010",
-		not(zero)	 when "011",
-		zero when "100",
-		carry when "101",
-		not(carry) when "110";
+		(not(a_31) and b_31) or (not(diff_31) and (not(a_31) xor b_31)) when "001", -- A >= B (signed)
+		(a_31 and not(b_31)) or (diff_31 and (not(a_31) xor b_31)) when "010", -- A < B (signed)
+		not(zero)	 when "011", -- A /= B
+		zero when "100", -- A = B
+		carry when "101", -- A >= B (unsigned)
+		not(carry) when "110", -- A < B (signed)
+		-- Undefined behavior.
+		zero when others;
 end synth;

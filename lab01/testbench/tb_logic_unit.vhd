@@ -37,21 +37,25 @@ begin
 
         -- A NOR B
         -- assign the correct value to op to test A NOR B
+        op <= "00";
         wait for 20 ns;                 -- wait for circuit to settle
         -- insert an ASSERT statement here
 
         -- A AND B
         -- assign the correct value to op to test A AND B
+        op <= "01";
         wait for 20 ns;                 -- wait for circuit to settle
         -- insert an ASSERT statement here
 
         -- A OR B
         -- assign the correct value to op to test A OR B
+        op <= "10";
         wait for 20 ns;                 -- wait for circuit to settle
         -- insert an ASSERT statement here
 
         -- A XOR B
         -- assign the correct value to op to test A XOR B
+        op <= "11";
         wait for 20 ns;                 -- wait for circuit to settle
         -- insert an ASSERT statement here
 

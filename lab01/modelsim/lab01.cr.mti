@@ -1,0 +1,85 @@
+C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_logic_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_logic_unit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_logic_unit
+-- Compiling architecture testbench of tb_logic_unit
+
+} {} {}} C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/comparator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/comparator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity comparator
+-- Compiling architecture synth of comparator
+
+} {} {}} C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity tb_ALU
+-- Compiling architecture bench of tb_ALU
+-- Loading entity ALU
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(81): Target type std.STANDARD.BOOLEAN in variable assignment is different from expression type ieee.std_logic_1164.STD_ULOGIC.
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(82): Target type std.STANDARD.BOOLEAN in variable assignment is different from expression type ieee.std_logic_1164.STD_ULOGIC.
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(83): (vcom-1581) No feasible entries for infix operator '/='.
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(83): Bad right hand side (infix expression) in variable assignment.
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(84): (vcom-1581) No feasible entries for infix operator '='.
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(84): Bad right hand side (infix expression) in variable assignment.
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(85): near ";": syntax error
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(86): near ";": syntax error
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(88): (vcom-1581) No feasible entries for infix operator '='.
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(88): Bad right hand side (infix expression) in variable assignment.
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(91): ** Error: (vcom-1583) Illegal type converson from 'Integer' to 'ieee.NUMERIC_STD.SIGNED' (numeric to array).
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(94): near "end": (vcom-1576) expecting ';'.
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(108): near "when": (vcom-1576) expecting END.
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(125): near "when": (vcom-1576) expecting END.
+** Error: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/testbench/tb_ALU.vhd(138): near "loop": (vcom-1576) expecting PROCESS.
+
+} {10.0 25.0} {}} C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/shift_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/shift_unit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity shift_unit
+-- Compiling architecture synth of shift_unit
+
+} {} {}} C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/logic_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/logic_unit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity logic_unit
+-- Compiling architecture synth of logic_unit
+
+} {} {}} C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/ALU.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ALU
+-- Compiling architecture bdf_type of ALU
+
+} {} {}} C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/add_sub.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/add_sub.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity add_sub
+-- Compiling architecture synth of add_sub
+** Warning: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/add_sub.vhd(31): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 32 is not equal to right length 33).
+
+} {} {}} C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/multiplexer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/multiplexer.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity multiplexer
+-- Compiling architecture synth of multiplexer
+
+} {} {}}

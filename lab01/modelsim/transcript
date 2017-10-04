@@ -1,0 +1,70 @@
+# Compile of add_sub.vhd was successful with warnings.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd failed with 2 errors.
+# Compile of logic_unit.vhd failed with 2 errors.
+# Compile of multiplexer.vhd failed with 2 errors.
+# Compile of shift_unit.vhd was successful.
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_logic_unit.vhd was successful.
+# 8 compiles, 4 failed with 22 errors.
+# Compile of add_sub.vhd was successful with warnings.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd failed with 2 errors.
+# Compile of logic_unit.vhd failed with 2 errors.
+# Compile of multiplexer.vhd failed with 2 errors.
+# Compile of shift_unit.vhd was successful.
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_logic_unit.vhd was successful.
+# 8 compiles, 4 failed with 22 errors.
+# Compile of add_sub.vhd was successful with warnings.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd failed with 2 errors.
+# Compile of logic_unit.vhd failed with 2 errors.
+# Compile of multiplexer.vhd failed with 2 errors.
+# Compile of shift_unit.vhd was successful.
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_logic_unit.vhd was successful.
+# 8 compiles, 4 failed with 22 errors.
+# Compile of add_sub.vhd was successful with warnings.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd failed with 3 errors.
+# Compile of multiplexer.vhd failed with 3 errors.
+# Compile of shift_unit.vhd was successful.
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_logic_unit.vhd was successful.
+# 8 compiles, 3 failed with 22 errors.
+# Compile of add_sub.vhd was successful with warnings.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd failed with 3 errors.
+# Compile of multiplexer.vhd failed with 3 errors.
+# Compile of shift_unit.vhd was successful.
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_logic_unit.vhd was successful.
+# 8 compiles, 3 failed with 22 errors.
+# Compile of add_sub.vhd was successful with warnings.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_logic_unit.vhd was successful.
+# 8 compiles, 1 failed with 16 errors.
+vsim -gui work.tb_logic_unit
+# vsim -gui work.tb_logic_unit 
+# Start time: 11:09:19 on Oct 04,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_logic_unit(testbench)
+# Loading work.logic_unit(fast)
+add wave -position end  sim:/tb_logic_unit/a
+add wave -position end  sim:/tb_logic_unit/b
+add wave -position end  sim:/tb_logic_unit/r
+add wave -position end  sim:/tb_logic_unit/op
+restart -f
+run -all
+# End time: 11:11:55 on Oct 04,2017, Elapsed time: 0:02:36
+# Errors: 0, Warnings: 0

@@ -15,21 +15,23 @@ end add_sub;
 
 architecture synth of add_sub is
 	signal r_out : std_logic_vector(32 downto 0);
+	constant zeros : std_logic_vector(r_out'range) := (others => '0');
 begin
 	process(a, b, sub_mode)
 	begin
 		if(sub_mode = '0') then
-			r_out <= std_logic_vector(signed(a) + signed(b));
+			r_out <= '0' & std_logic_vector(signed(a) + signed(b));
 		else
-			r_out <= std_logic_vector(signed(a) - signed(b));
+			r_out <= '0' & std_logic_vector(signed(a) - signed(b));
 		end if;
 		
 		r <= r_out(31 downto 0);
 		carry <= r_out(32);
 		
-		if(r_out(31 downto 0) = std_logic_vector(signed(0))) then
+		if(r_out(31 downto 0) = zeros) then
 			zero <= '1';
 		else
 			zero <= '0';
+		end if;
 	end process;
 end synth;

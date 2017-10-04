@@ -14,4 +14,10 @@ end multiplexer;
 
 architecture synth of multiplexer is
 begin
+	with sel select o <=
+		i0 when "00", -- add/sub
+		i1 when "01", -- comparator
+		i2 when "10", -- logical unit
+		i3 when "11", -- shift/rotate unit
+		i0 when others; -- Undefined
 end synth;
