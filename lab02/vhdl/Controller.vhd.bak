@@ -16,5 +16,4 @@ end controller;
 
 architecture synth of controller is
 begin
-	
 end synth;
