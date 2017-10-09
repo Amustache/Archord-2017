@@ -1,0 +1,326 @@
+m255
+K4
+z0
+13
+cModel Technology
+Eadd_sub
+Z0 w1507574055
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/modelsim
+Z5 8C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/add_sub.vhd
+Z6 FC:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/add_sub.vhd
+l0
+L5
+V207_zj^V^3XmVFBkYPT0^3
+!s100 Ho^oT``GLJUNf<W@=D9Un1
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1507576694
+!i10b 1
+Z9 !s108 1507576694.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/add_sub.vhd|
+Z11 !s107 C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/add_sub.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Asynth
+R1
+R2
+R3
+DEx4 work 7 add_sub 0 22 207_zj^V^3XmVFBkYPT0^3
+l19
+L16
+VgNKgoae37AKFQHUcacIk41
+!s100 QnfffEc;PMZ?^g`oe2QPU1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealu
+Z14 w1476133812
+R2
+R3
+R4
+Z15 8C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/ALU.vhd
+Z16 FC:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/ALU.vhd
+l0
+L24
+VLIV0?b]kCZ40<iPbTC=4:2
+!s100 O`l`Xc5c_V9`dzon<W_fQ2
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/ALU.vhd|
+Z18 !s107 C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/ALU.vhd|
+!i113 1
+R12
+R13
+Abdf_type
+R2
+R3
+Z19 DEx4 work 3 alu 0 22 LIV0?b]kCZ40<iPbTC=4:2
+l91
+L34
+Vn7Jhlm<g3=Igo4gAY0?Z=3
+!s100 ao^@A8=RSg[FW?jY:[EXI0
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Ecomparator
+Z20 w1507110073
+R2
+R3
+R4
+Z21 8C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/comparator.vhd
+Z22 FC:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/comparator.vhd
+l0
+L4
+V3WXakLjKGIMC9fTC_zAJG3
+!s100 XTWoF>RX1>LcmLLBBo;N:0
+R7
+32
+R8
+!i10b 1
+R9
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/comparator.vhd|
+Z24 !s107 C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/comparator.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 10 comparator 0 22 3WXakLjKGIMC9fTC_zAJG3
+l17
+L16
+VAIGOXKZmd:04DlD4A8[ae2
+!s100 faaKSPea[ez;T>F^2`mJZ2
+R7
+32
+R8
+!i10b 1
+R9
+R23
+R24
+!i113 1
+R12
+R13
+Elogic_unit
+Z25 w1507108122
+R2
+R3
+R4
+Z26 8C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/logic_unit.vhd
+Z27 FC:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/logic_unit.vhd
+l0
+L4
+VfUEL39DQfcR_XLk:Hoe<f3
+!s100 UJioXKUg8XUULGTSe2WE20
+R7
+32
+R8
+!i10b 1
+R9
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/logic_unit.vhd|
+Z29 !s107 C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/logic_unit.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 10 logic_unit 0 22 fUEL39DQfcR_XLk:Hoe<f3
+l14
+L13
+VOnYBTRdoz0DWo4CIN761n3
+!s100 MK^j1h05gc9LI=`Y7`mkj2
+R7
+32
+R8
+!i10b 1
+R9
+R28
+R29
+!i113 1
+R12
+R13
+Emultiplexer
+Z30 w1507575063
+R2
+R3
+R4
+Z31 8C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/multiplexer.vhd
+Z32 FC:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/multiplexer.vhd
+l0
+L4
+V4iH6`nZgBAHVia??bJk>G2
+!s100 UDM^5ga=kb9Z[=K^]bghV0
+R7
+32
+R8
+!i10b 1
+R9
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/multiplexer.vhd|
+Z34 !s107 C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/multiplexer.vhd|
+!i113 1
+R12
+R13
+Asynth
+R2
+R3
+DEx4 work 11 multiplexer 0 22 4iH6`nZgBAHVia??bJk>G2
+l16
+L15
+V4PDWNTVC4XQ@M?b_GHCea2
+!s100 DIlG<bG;^J64VE^mBbhSU2
+R7
+32
+R8
+!i10b 1
+R9
+R33
+R34
+!i113 1
+R12
+R13
+Eshift_unit
+Z35 w1507104541
+R1
+R2
+R3
+R4
+Z36 8C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/shift_unit.vhd
+Z37 FC:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/shift_unit.vhd
+l0
+L5
+VoYz=ZP:Rg2U9Eb=ZGo>940
+!s100 C4@E7NN0:UB89P^MW405S0
+R7
+32
+R8
+!i10b 1
+R9
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/shift_unit.vhd|
+Z39 !s107 C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/vhdl/shift_unit.vhd|
+!i113 1
+R12
+R13
+Asynth
+R1
+R2
+R3
+DEx4 work 10 shift_unit 0 22 oYz=ZP:Rg2U9Eb=ZGo>940
+l15
+L14
+VENo6oHF8VWXj?Ud`^YOD:1
+!s100 h9lcmU_G4Id<P5KQ>gBnR0
+R7
+32
+R8
+!i10b 1
+R9
+R38
+R39
+!i113 1
+R12
+R13
+Etb_alu
+Z40 w1507574844
+R1
+R2
+R3
+R4
+Z41 8C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/testbench/tb_ALU.vhd
+Z42 FC:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/testbench/tb_ALU.vhd
+l0
+L5
+VT@^:2]h1P<eK[1@Zc>8Nz2
+!s100 h4gR^9UUSFUJBW2hl@TTO2
+R7
+32
+R8
+!i10b 1
+R9
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/testbench/tb_ALU.vhd|
+Z44 !s107 C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/testbench/tb_ALU.vhd|
+!i113 1
+Z45 !s102 -cover s
+Z46 o-work work -2002 -explicit -cover s
+R13
+Abench
+R19
+R1
+R2
+R3
+Z47 DEx4 work 6 tb_alu 0 22 T@^:2]h1P<eK[1@Zc>8Nz2
+l12
+L8
+Z48 V?PdHOTJ7K[R[ahgRRT>Vo1
+Z49 !s100 kc]lG^8Knjj=ZU=]c3_zG1
+R7
+32
+R8
+!i10b 1
+R9
+R43
+R44
+!i113 1
+R45
+R46
+R13
+Etb_logic_unit
+Z50 w1507108733
+R2
+R3
+R4
+Z51 8C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/testbench/tb_logic_unit.vhd
+Z52 FC:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/testbench/tb_logic_unit.vhd
+l0
+L4
+V56]=9U8E_0^hnOWE8_kak0
+!s100 I0S6Z^F^OTJKf4O?Ic>222
+R7
+32
+R8
+!i10b 1
+R9
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/testbench/tb_logic_unit.vhd|
+Z54 !s107 C:/Users/Stache/Desktop/Archord/Archord-2017/lab01bis/testbench/tb_logic_unit.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R2
+R3
+DEx4 work 13 tb_logic_unit 0 22 56]=9U8E_0^hnOWE8_kak0
+l21
+L7
+VZRDWU0G[8M35<f6mUC4z<1
+!s100 Ci52VBg3K<6jTBQ>M`fSX3
+R7
+32
+R8
+!i10b 1
+R9
+R53
+R54
+!i113 1
+R12
+R13

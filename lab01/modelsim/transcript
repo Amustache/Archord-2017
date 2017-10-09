@@ -1,27 +1,48 @@
-# Compile of add_sub.vhd was successful with warnings.
+# Reading C:/Program Files (x86)/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/modelsim/alu.mpf
+# Loading project alu
+# wrong # args: should be "load file ?pkg? ?interp?"
+# wrong # args: should be "load file ?pkg? ?interp?"
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_logic_unit.vhd was successful.
+# Compile of add_sub.vhd was successful.
 # Compile of ALU.vhd was successful.
 # Compile of comparator.vhd was successful.
 # Compile of logic_unit.vhd was successful.
 # Compile of multiplexer.vhd was successful.
 # Compile of shift_unit.vhd was successful.
+# 8 compiles, 1 failed with 16 errors.
 # Compile of tb_ALU.vhd failed with 16 errors.
 # Compile of tb_logic_unit.vhd was successful.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of shift_unit.vhd was successful.
 # 8 compiles, 1 failed with 16 errors.
-vsim -gui work.tb_logic_unit
-# vsim -gui work.tb_logic_unit 
-# Start time: 11:24:59 on Oct 04,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_logic_unit(testbench)
-# Loading work.logic_unit(fast)
-add wave -position end  sim:/tb_logic_unit/a
-add wave -position end  sim:/tb_logic_unit/b
-add wave -position end  sim:/tb_logic_unit/r
-add wave -position end  sim:/tb_logic_unit/op
-start -all
-# Le systäme ne peut trouver le fichier -all.
-restart -f
-   run -all
-# End time: 11:25:38 on Oct 04,2017, Elapsed time: 0:00:39
-# Errors: 1, Warnings: 0
+# wrong # args: should be "load file ?pkg? ?interp?"
+# wrong # args: should be "load file ?pkg? ?interp?"
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_logic_unit.vhd was successful.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# 8 compiles, 1 failed with 16 errors.
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_logic_unit.vhd was successful.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# 8 compiles, 1 failed with 16 errors.
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_ALU.vhd failed with 16 errors.
+# Compile of tb_ALU.vhd was successful.

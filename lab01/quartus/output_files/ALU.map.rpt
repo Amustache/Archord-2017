@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Wed Oct 04 11:07:10 2017
+Mon Oct 09 20:34:36 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -44,13 +44,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 04 11:07:10 2017       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 09 20:34:36 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; ALU                                         ;
 ; Top-level Entity Name              ; ALU                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 135                                         ;
-;     Total combinational functions  ; 135                                         ;
+; Total logic elements               ; 144                                         ;
+;     Total combinational functions  ; 144                                         ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 102                                         ;
@@ -182,16 +182,16 @@ agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 135         ;
+; Estimated Total logic elements              ; 144         ;
 ;                                             ;             ;
-; Total combinational functions               ; 135         ;
+; Total combinational functions               ; 144         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 68          ;
-;     -- 3 input functions                    ; 33          ;
-;     -- <=2 input functions                  ; 34          ;
+;     -- 4 input functions                    ; 77          ;
+;     -- 3 input functions                    ; 32          ;
+;     -- <=2 input functions                  ; 35          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 103         ;
+;     -- normal mode                          ; 112         ;
 ;     -- arithmetic mode                      ; 32          ;
 ;                                             ;             ;
 ; Total registers                             ; 0           ;
@@ -203,9 +203,9 @@ agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; op[1]~input ;
-; Maximum fan-out                             ; 35          ;
-; Total fan-out                               ; 573         ;
-; Average fan-out                             ; 1.69        ;
+; Maximum fan-out                             ; 34          ;
+; Total fan-out                               ; 608         ;
+; Average fan-out                             ; 1.75        ;
 +---------------------------------------------+-------------+
 
 
@@ -214,9 +214,10 @@ agreement for further details.
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name ; Library Name ;
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+-------------+--------------+
-; |ALU                           ; 135 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 102  ; 0            ; |ALU                           ; ALU         ; work         ;
-;    |add_sub:add_sub_0|         ; 65 (65)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|add_sub:add_sub_0         ; add_sub     ; work         ;
-;    |multiplexer:multiplexer_0| ; 70 (70)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|multiplexer:multiplexer_0 ; multiplexer ; work         ;
+; |ALU                           ; 144 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 102  ; 0            ; |ALU                           ; ALU         ; work         ;
+;    |add_sub:add_sub_0|         ; 75 (75)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|add_sub:add_sub_0         ; add_sub     ; work         ;
+;    |comparator:comparator_0|   ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|comparator:comparator_0   ; comparator  ; work         ;
+;    |multiplexer:multiplexer_0| ; 65 (65)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|multiplexer:multiplexer_0 ; multiplexer ; work         ;
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -251,17 +252,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 102                         ;
-; cycloneiii_lcell_comb ; 135                         ;
+; cycloneiii_lcell_comb ; 144                         ;
 ;     arith             ; 32                          ;
 ;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 31                          ;
-;     normal            ; 103                         ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 68                          ;
+;     normal            ; 112                         ;
+;         2 data inputs ; 34                          ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 77                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.10                        ;
-; Average LUT depth     ; 5.40                        ;
+; Max LUT depth         ; 10.10                       ;
+; Average LUT depth     ; 7.16                        ;
 +-----------------------+-----------------------------+
 
 
@@ -280,7 +281,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 04 11:06:48 2017
+    Info: Processing started: Mon Oct 09 20:34:15 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -304,10 +305,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
 Info (12128): Elaborating entity "multiplexer" for hierarchy "multiplexer:multiplexer_0"
 Info (12128): Elaborating entity "add_sub" for hierarchy "add_sub:add_sub_0"
-Warning (10492): VHDL Process Statement warning at add_sub.vhd(28): signal "r_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/add_sub.vhd Line: 28
-Warning (10492): VHDL Process Statement warning at add_sub.vhd(29): signal "r_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/add_sub.vhd Line: 29
-Warning (10492): VHDL Process Statement warning at add_sub.vhd(31): signal "r_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/add_sub.vhd Line: 31
-Warning (10620): VHDL warning at add_sub.vhd(31): comparison between unequal length operands always returns FALSE File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab01/vhdl/add_sub.vhd Line: 31
 Info (12128): Elaborating entity "comparator" for hierarchy "comparator:comparator_0"
 Info (12128): Elaborating entity "logic_unit" for hierarchy "logic_unit:logic_unit_0"
 Info (12128): Elaborating entity "shift_unit" for hierarchy "shift_unit:shift_unit_0"
@@ -315,14 +312,14 @@ Warning (10541): VHDL Signal Declaration warning at shift_unit.vhd(10): used imp
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 237 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 246 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 70 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 135 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info (21061): Implemented 144 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 660 megabytes
-    Info: Processing ended: Wed Oct 04 11:07:10 2017
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Processing ended: Mon Oct 09 20:34:36 2017
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:36
 
 
