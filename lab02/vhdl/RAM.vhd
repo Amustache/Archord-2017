@@ -17,7 +17,7 @@ architecture synth of RAM is
 	type ram_mem is array(1023 downto 0) of std_logic_vector(31 downto 0);
 	signal ram : ram_mem;
 	signal r_addr : std_logic_vector(9 downto 0);
-	signal r_read : std_logic_vector;
+	signal r_read : std_logic;
 
 begin
 	
@@ -26,13 +26,14 @@ begin
 	begin
 		if (rising_edge(clk)) then
 			r_addr <= address;
-			r_read : cs and read;
+			r_read <= cs and read;
 		end if;
 	end process;
 	
 	-- Read memory and output rddata
 	process(ram, r_addr, r_read)
-		if (r_read = '1') then
+	begin
+		if(r_read = '1') then
 			rddata <= ram(to_integer(unsigned(r_addr)));
 		end if;
 	end process;
@@ -40,8 +41,8 @@ begin
 	-- Write memory and output wrdata
 	process(clk)
 	begin
-		if (rising_edge(clk)) then
-			if (cs = '1' and write = '1') then
+		if(rising_edge(clk)) then
+			if(cs = '1' and write = '1') then
 				ram(to_integer(unsigned(address))) <= wrdata;
 			end if;
 		end if;

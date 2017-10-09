@@ -21,9 +21,11 @@ begin
 		cs_ROM <= '0';
 		if (address < X"1000") then
 			cs_ROM <= '1';
-		else if (adress >= X"1000" and address < X"2000") then
+		end if;
+		if (address >= X"1000" and address < X"2000") then
 			cs_RAM <= '1';
-		else if (adress >= X"2000" and address < X"2010") then
+		end if;
+		if (address >= X"2000" and address < X"2010") then
 			cs_LEDS <= '1';
 		end if;
 	end process;
