@@ -33,6 +33,7 @@ begin
 	-- Read memory and output rddata
 	process(ram, r_addr, r_read)
 	begin
+		rddata <= (others => 'Z');
 		if(r_read = '1') then
 			rddata <= ram(to_integer(unsigned(r_addr)));
 		end if;

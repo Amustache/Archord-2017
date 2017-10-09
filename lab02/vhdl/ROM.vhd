@@ -32,6 +32,7 @@ begin
 	-- Read memory and output rddata
 	process(rom, r_addr, r_read)
 	begin
+		rddata <= (others => 'Z');
 		if (r_read = '1') then
 			rddata <= rom(to_integer(unsigned(r_addr)));
 		end if;
