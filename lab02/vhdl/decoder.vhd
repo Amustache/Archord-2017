@@ -12,4 +12,19 @@ end decoder;
 
 architecture synth of decoder is
 begin
+	-- select the signal depending on the adress
+	process(address)
+	begin
+		cs_LEDS <= '0';
+		cs_RAM <= '0';
+		cs_ROM <= '0';
+		if (address < X"1000") then
+			cs_ROM <= '1';
+		else if (adress >= X"1000" and address < X"2000") then
+			cs_RAM <= '1';
+		else if (adress >= X"2000" and address < X"2010") then
+			cs_LEDS <= '1';
+		end if;
+	end process;
+		
 end synth;
