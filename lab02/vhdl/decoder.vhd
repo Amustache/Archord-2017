@@ -12,6 +12,7 @@ end decoder;
 
 architecture synth of decoder is
 begin
+
 	-- select the signal depending on the adress
 	process(address)
 	begin
