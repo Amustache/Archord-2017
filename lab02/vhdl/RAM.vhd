@@ -15,4 +15,5 @@ end RAM;
 
 architecture synth of RAM is
 begin
+	
 end synth;
