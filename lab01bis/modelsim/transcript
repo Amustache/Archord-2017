@@ -10,3 +10,13 @@
 # Compile of tb_logic_unit.vhd was successful.
 # Compile of tb_ALU.vhd was successful.
 # 8 compiles, 0 failed with no errors.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# Compile of tb_logic_unit.vhd was successful.
+# Compile of tb_ALU.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+# Load canceled

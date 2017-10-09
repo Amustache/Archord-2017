@@ -14,27 +14,21 @@ entity add_sub is
 end add_sub;
 
 architecture synth of add_sub is
+	signal r_out : std_logic_vector(32 downto 0);
+	constant zeros : std_logic_vector(r'range) := (others => '0');
 begin
-	process(a, b, sub_mode)
-		variable r_out : std_logic_vector(32 downto 0) := (others => '0');
-		variable a_temp : std_logic_vector(32 downto 0) := (others => '0');
-		variable b_temp : std_logic_vector(32 downto 0) := (others => '0');
-		constant zeros : std_logic_vector(32 downto 0) := (others => '0');
+	process(a, b, sub_mode, r_out)
 	begin
-		a_temp := '0' & a;
-		
 		if(sub_mode = '0') then
-			b_temp := '0' & b;
+			r_out <= '0' & std_logic_vector(signed(a) + signed(b));
 		else
-			b_temp := std_logic_vector(signed('0' & not(b)) + 1);
+			r_out <= '0' & std_logic_vector(signed(a) - signed(b));
 		end if;
-		
-		r_out := std_logic_vector(signed(a_temp) + signed(b_temp));
 		
 		r <= r_out(31 downto 0);
 		carry <= r_out(32);
 		
-		if(r_out = zeros) then
+		if(r_out(31 downto 0) = zeros) then
 			zero <= '1';
 		else
 			zero <= '0';
