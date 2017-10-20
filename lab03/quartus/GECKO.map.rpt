@@ -1,0 +1,279 @@
+Analysis & Synthesis report for GECKO
+Fri Oct 20 14:31:59 2017
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Fri Oct 20 14:31:59 2017           ;
+; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                      ; GECKO                                       ;
+; Top-level Entity Name              ; GECKO                                       ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE30F23C8       ;                    ;
+; Top-level entity name                                                      ; GECKO              ; GECKO              ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; On                 ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Oct 20 14:31:40 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file gecko.bdf
+    Info (12023): Found entity 1: GECKO
+Info (12021): Found 1 design units, including 1 entities, in source file alu.bdf
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.bdf
+    Info (12023): Found entity 1: CPU
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/add_sub.vhd
+    Info (12022): Found design unit 1: add_sub-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/add_sub.vhd Line: 16
+    Info (12023): Found entity 1: add_sub File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/add_sub.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/buttons.vhd
+    Info (12022): Found design unit 1: buttons-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/buttons.vhd Line: 22
+    Info (12023): Found entity 1: buttons File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/buttons.vhd Line: 5
+Warning (12019): Can't analyze file -- file ../vhdl/comparator.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/controller.vhd
+    Info (12022): Found design unit 1: controller-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 39
+    Info (12023): Found entity 1: controller File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/decoder.vhd
+    Info (12022): Found design unit 1: decoder-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/decoder.vhd Line: 14
+    Info (12023): Found entity 1: decoder File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/decoder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/extend.vhd
+    Info (12022): Found design unit 1: extend-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/extend.vhd Line: 12
+    Info (12023): Found entity 1: extend File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/extend.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/ir.vhd
+    Info (12022): Found design unit 1: IR-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/IR.vhd Line: 13
+    Info (12023): Found entity 1: IR File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/IR.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/leds.vhd
+    Info (12022): Found design unit 1: LEDs-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/LEDs.vhd Line: 22
+    Info (12023): Found entity 1: LEDs File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/LEDs.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/logic_unit.vhd
+    Info (12022): Found design unit 1: logic_unit-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/logic_unit.vhd Line: 13
+    Info (12023): Found entity 1: logic_unit File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/logic_unit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/multiplexer.vhd
+    Info (12022): Found design unit 1: multiplexer-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/multiplexer.vhd Line: 15
+    Info (12023): Found entity 1: multiplexer File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/multiplexer.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/mux2x5.vhd
+    Info (12022): Found design unit 1: mux2x5-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/mux2x5.vhd Line: 13
+    Info (12023): Found entity 1: mux2x5 File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/mux2x5.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/mux2x16.vhd
+    Info (12022): Found design unit 1: mux2x16-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/mux2x16.vhd Line: 13
+    Info (12023): Found entity 1: mux2x16 File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/mux2x16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/mux2x32.vhd
+    Info (12022): Found design unit 1: mux2x32-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/mux2x32.vhd Line: 13
+    Info (12023): Found entity 1: mux2x32 File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/mux2x32.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/pc.vhd
+    Info (12022): Found design unit 1: PC-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/PC.vhd Line: 19
+    Info (12023): Found entity 1: PC File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/PC.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/ram.vhd
+    Info (12022): Found design unit 1: RAM-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/RAM.vhd Line: 16
+    Info (12023): Found entity 1: RAM File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/RAM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/register_file.vhd
+    Info (12022): Found design unit 1: register_file-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/register_file.vhd Line: 18
+    Info (12023): Found entity 1: register_file File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/register_file.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/rom.vhd
+    Info (12022): Found design unit 1: ROM-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/ROM.vhd Line: 15
+    Info (12023): Found entity 1: ROM File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/ROM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/rom_block.vhd
+    Info (12022): Found design unit 1: rom_block-SYN File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/ROM_Block.vhd Line: 53
+    Info (12023): Found entity 1: ROM_Block File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/ROM_Block.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file /users/stache/desktop/archord/archord-2017/lab03/vhdl/shift_unit.vhd
+    Info (12022): Found design unit 1: shift_unit-synth File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/shift_unit.vhd Line: 14
+    Info (12023): Found entity 1: shift_unit File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/shift_unit.vhd Line: 5
+Info (12127): Elaborating entity "GECKO" for the top level hierarchy
+Info (12128): Elaborating entity "LEDs" for hierarchy "LEDs:LEDs_0"
+Info (12128): Elaborating entity "decoder" for hierarchy "decoder:decoder_0"
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:inst"
+Info (12128): Elaborating entity "controller" for hierarchy "CPU:inst|controller:controller_0"
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(12): used implicit default value for signal "branch_op" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(14): used implicit default value for signal "imm_signed" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 14
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(16): used implicit default value for signal "ir_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 16
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(18): used implicit default value for signal "pc_add_imm" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 18
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(19): used implicit default value for signal "pc_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 19
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(20): used implicit default value for signal "pc_sel_a" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 20
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(21): used implicit default value for signal "pc_sel_imm" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 21
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(23): used implicit default value for signal "rf_wren" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(25): used implicit default value for signal "sel_addr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 25
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(26): used implicit default value for signal "sel_b" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 26
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(27): used implicit default value for signal "sel_mem" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 27
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(28): used implicit default value for signal "sel_pc" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 28
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(29): used implicit default value for signal "sel_ra" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 29
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(30): used implicit default value for signal "sel_rC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 30
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(32): used implicit default value for signal "read" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 32
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(33): used implicit default value for signal "write" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 33
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(35): used implicit default value for signal "op_alu" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/controller.vhd Line: 35
+Info (12128): Elaborating entity "IR" for hierarchy "CPU:inst|IR:IR_0"
+Warning (10541): VHDL Signal Declaration warning at IR.vhd(9): used implicit default value for signal "Q" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/IR.vhd Line: 9
+Info (12128): Elaborating entity "mux2x16" for hierarchy "CPU:inst|mux2x16:mux_addr"
+Info (12128): Elaborating entity "PC" for hierarchy "CPU:inst|PC:PC_0"
+Warning (10541): VHDL Signal Declaration warning at PC.vhd(15): used implicit default value for signal "addr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/PC.vhd Line: 15
+Info (12128): Elaborating entity "ALU" for hierarchy "CPU:inst|ALU:alu_0"
+Info (12128): Elaborating entity "multiplexer" for hierarchy "CPU:inst|ALU:alu_0|multiplexer:multiplexer_0"
+Info (12128): Elaborating entity "add_sub" for hierarchy "CPU:inst|ALU:alu_0|add_sub:add_sub_0"
+Info (12128): Elaborating entity "logic_unit" for hierarchy "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0"
+Info (12128): Elaborating entity "shift_unit" for hierarchy "CPU:inst|ALU:alu_0|shift_unit:shift_unit_0"
+Info (12128): Elaborating entity "register_file" for hierarchy "CPU:inst|register_file:register_file_0"
+Warning (10492): VHDL Process Statement warning at register_file.vhd(34): signal "reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/register_file.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at register_file.vhd(47): signal "reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/register_file.vhd Line: 47
+Info (12128): Elaborating entity "mux2x5" for hierarchy "CPU:inst|mux2x5:mux_aw"
+Info (12128): Elaborating entity "mux2x32" for hierarchy "CPU:inst|mux2x32:mux_data"
+Info (12128): Elaborating entity "extend" for hierarchy "CPU:inst|extend:extend_0"
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM_0"
+Warning (10541): VHDL Signal Declaration warning at ROM.vhd(17): used implicit default value for signal "rom" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Stache/Desktop/Archord/Archord-2017/lab03/vhdl/ROM.vhd Line: 17
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM_0"
+Info (12128): Elaborating entity "buttons" for hierarchy "buttons:buttons_0"
+Error (12006): Node instance "comparator_0" instantiates undefined entity "comparator". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP.
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 24 warnings
+    Error: Peak virtual memory: 654 megabytes
+    Error: Processing ended: Fri Oct 20 14:32:00 2017
+    Error: Elapsed time: 00:00:20
+    Error: Total CPU time (on all processors): 00:00:34
+
+

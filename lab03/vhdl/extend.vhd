@@ -11,4 +11,7 @@ end extend;
 
 architecture synth of extend is
 begin
+	with signed select imm32 <=
+		(31 downto 16 => '0') & imm16 		when '0',
+		(31 downto 16 => imm16(15)) & imm16 when '1';
 end synth;

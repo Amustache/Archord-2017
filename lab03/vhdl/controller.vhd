@@ -37,5 +37,7 @@ entity controller is
 end controller;
 
 architecture synth of controller is
+	type state is (fetch1, fetch2, decode, r_op, store, break, load1, load2, i_op);
 begin
+	
 end synth;

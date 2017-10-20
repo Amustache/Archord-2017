@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GECKO
-Mon Oct 09 23:46:41 2017
+Tue Oct 10 17:17:46 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 09 23:46:41 2017       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 10 17:17:46 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
@@ -289,7 +289,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -299,7 +299,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Oct 09 23:46:22 2017
+    Info: Processing started: Tue Oct 10 17:17:23 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -450,8 +450,8 @@ Info (21057): Implemented 98 device resources after synthesis - the final resour
     Info (21059): Implemented 96 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 106 warnings
     Info: Peak virtual memory: 662 megabytes
-    Info: Processing ended: Mon Oct 09 23:46:41 2017
-    Info: Elapsed time: 00:00:19
+    Info: Processing ended: Tue Oct 10 17:17:46 2017
+    Info: Elapsed time: 00:00:23
     Info: Total CPU time (on all processors): 00:00:33
 
 

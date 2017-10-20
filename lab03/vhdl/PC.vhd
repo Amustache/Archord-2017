@@ -18,4 +18,5 @@ end PC;
 
 architecture synth of PC is
 begin
+	
 end synth;
