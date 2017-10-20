@@ -17,6 +17,21 @@ entity PC is
 end PC;
 
 architecture synth of PC is
+	-- Data array
+	signal current : std_logic_vector(15 downto 0);
 begin
+	process(clk, reset_n)
+	begin
+		if(rising_edge(clk)) then -- Clock
+			if(reset_n = '1') then -- Sync reset
+				current <= (others => '0');
+			else
+				if(en = '1') then -- Next addr
+					current <= std_logic_vector(unsigned(current) + 4);
+				end if;
+			end if;
+		end if;
+	end process;
 	
+	addr <= (31 downto 16 => '0') & current(15 downto 2) & (1 downto 0 => '0');
 end synth;
