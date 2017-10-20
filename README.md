@@ -6,3 +6,5 @@ Let's rule!
 ## lab01: Arithmetic-Logic Unit (ALU)
 
 ## lab02: Register File and Memories (RAM, ROM)
+
+## lab03: Designing a Multicycle Processor
