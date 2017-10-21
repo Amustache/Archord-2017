@@ -18,28 +18,27 @@ end PC;
 
 architecture synth of PC is
 	-- Data array
-	signal current : std_logic_vector(15 downto 0);
+	signal current : std_logic_vector(31 downto 0);
 begin
 	process(clk, reset_n)
 	begin
-		if(rising_edge(clk)) then -- Clock
-			if(reset_n = '1') then -- Sync reset
+		if(reset_n = '0') then -- Sync reset
 				current <= (others => '0');
-			else
-				if(en = '1') then -- Next addr
-					if(sel_a = '1') then
-						current <= std_logic_vector(unsigned(a));
-					elsif(sel_imm = '1') then
-						current <= std_logic_vector(shift_left(unsigned(imm), 2));
-					elsif(add_imm = '1') then
-						current <= std_logic_vector(unsigned(current) + unsigned(imm));
-					else
-						current <= std_logic_vector(unsigned(current) + 4);
-					end if;
+		elsif(rising_edge(clk)) then -- Clock
+			if(en = '1') then -- Next addr
+				if(sel_a = '1') then
+					current <= (31 downto 16 => '0') & a;
+				elsif(sel_imm = '1') then
+					current <= (31 downto 16 => '0') & std_logic_vector(
+						shift_left(signed(imm), 2));
+				elsif(add_imm = '1') then
+					current <= std_logic_vector(signed(current) + signed(imm));
+				else
+					current <= std_logic_vector(unsigned(current) + 4);
 				end if;
 			end if;
 		end if;
 	end process;
 	
-	addr <= (31 downto 16 => '0') & current(15 downto 2) & (1 downto 0 => '0');
+	addr <= current;
 end synth;
