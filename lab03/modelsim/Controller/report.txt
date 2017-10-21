@@ -1,0 +1,168 @@
+Time: 22.5 ns Input File Line: 10
+* Error: op_alu = 'XX0XXX' instead of '110000'.
+ Verify the op_alu generation.
+
+Time: 82.5 ns Input File Line: 22
+* Error: op_alu = 'XX0XXX' instead of '110001'.
+ Verify the op_alu generation.
+
+Time: 182.5 ns Input File Line: 42
+* Error: op_alu = 'XXXXXX' instead of '011011'.
+ Verify the op_alu generation.
+
+Time: 242.5 ns Input File Line: 54
+* Error: op_alu = 'XXXXXX' instead of '011100'.
+ Verify the op_alu generation.
+
+Time: 262.5 ns Input File Line: 58
+* Error: op_alu = 'XXXXXX' instead of '011101'.
+ Verify the op_alu generation.
+
+Time: 282.5 ns Input File Line: 62
+* Error: op_alu = 'XXXXXX' instead of '011110'.
+ Verify the op_alu generation.
+
+Time: 362.5 ns Input File Line: 79
+* Error: op_alu = 'XX0XXX' instead of '110000'.
+ Verify the op_alu generation.
+
+Time: 362.5 ns Input File Line: 79
+* Error: sel_b = '1' instead of '0'.
+ During RI_OP, sel_b has to be 0.
+
+Time: 382.5 ns Input File Line: 83
+* Error: sel_b = '1' instead of '0'.
+ During RI_OP, sel_b has to be 0.
+
+Time: 402.5 ns Input File Line: 87
+* Error: sel_b = '1' instead of '0'.
+ During RI_OP, sel_b has to be 0.
+
+Time: 422.5 ns Input File Line: 91
+* Error: sel_b = '1' instead of '0'.
+ During RI_OP, sel_b has to be 0.
+
+Time: 462.5 ns Input File Line: 100
+* Error: op_alu = 'XXXXXX' instead of '011001'.
+ Verify the op_alu generation.
+
+Time: 462.5 ns Input File Line: 100
+* Error: imm_signed = '0' instead of '1'.
+ During UI_OP, imm_signed has to be 1.
+
+Time: 462.5 ns Input File Line: 100
+* Error: rf_wren = '0' instead of '1'.
+ During I_OP, rf_wren has to be 1.
+
+Time: 477.5 ns Input File Line: 104
+* Error: op_alu = 'XXXXXX' instead of '011010'.
+ Verify the op_alu generation.
+
+Time: 477.5 ns Input File Line: 104
+* Error: imm_signed = '0' instead of '1'.
+ During UI_OP, imm_signed has to be 1.
+
+Time: 477.5 ns Input File Line: 104
+* Error: rf_wren = '0' instead of '1'.
+ During I_OP, rf_wren has to be 1.
+
+Time: 492.5 ns Input File Line: 108
+* Error: op_alu = 'XXXXXX' instead of '011011'.
+ Verify the op_alu generation.
+
+Time: 492.5 ns Input File Line: 108
+* Error: imm_signed = '0' instead of '1'.
+ During UI_OP, imm_signed has to be 1.
+
+Time: 492.5 ns Input File Line: 108
+* Error: rf_wren = '0' instead of '1'.
+ During I_OP, rf_wren has to be 1.
+
+Time: 507.5 ns Input File Line: 112
+* Error: op_alu = 'XXXXXX' instead of '011100'.
+ Verify the op_alu generation.
+
+Time: 507.5 ns Input File Line: 112
+* Error: imm_signed = '0' instead of '1'.
+ During UI_OP, imm_signed has to be 1.
+
+Time: 507.5 ns Input File Line: 112
+* Error: rf_wren = '0' instead of '1'.
+ During I_OP, rf_wren has to be 1.
+
+Time: 522.5 ns Input File Line: 117
+* Error: imm_signed = '1' instead of '0'.
+ During UI_OP, imm_signed has to be 0.
+
+Time: 542.5 ns Input File Line: 121
+* Error: imm_signed = '1' instead of '0'.
+ During UI_OP, imm_signed has to be 0.
+
+Time: 562.5 ns Input File Line: 125
+* Error: imm_signed = '1' instead of '0'.
+ During UI_OP, imm_signed has to be 0.
+
+Time: 582.5 ns Input File Line: 129
+* Error: op_alu = 'XXXXXX' instead of '011101'.
+ Verify the op_alu generation.
+
+Time: 582.5 ns Input File Line: 129
+* Error: rf_wren = '0' instead of '1'.
+ During UI_OP, rf_wren has to be 1.
+
+Time: 597.5 ns Input File Line: 133
+* Error: op_alu = 'XXXXXX' instead of '011110'.
+ Verify the op_alu generation.
+
+Time: 597.5 ns Input File Line: 133
+* Error: rf_wren = '0' instead of '1'.
+ During UI_OP, rf_wren has to be 1.
+
+Time: 662.5 ns Input File Line: 151
+* Error: branch_op = '1' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 667.5 ns Input File Line: 152
+* Error: branch_op = '1' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 672.5 ns Input File Line: 152
+* Error: branch_op = '1' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 677.5 ns Input File Line: 152
+* Error: branch_op = '1' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 682.5 ns Input File Line: 152
+* Error: branch_op = '1' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 687.5 ns Input File Line: 152
+* Error: branch_op = '1' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 692.5 ns Input File Line: 152
+* Error: branch_op = '1' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 697.5 ns Input File Line: 152
+* Error: branch_op = '1' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 702.5 ns Input File Line: 152
+* Error: branch_op = '1' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 707.5 ns Input File Line: 152
+* Error: branch_op = '1' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 712.5 ns Input File Line: 152
+* Error: branch_op = '1' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 717.5 ns Input File Line: 152
+* Error: branch_op = '1' instead of '0'.
+ During FETCH, branch_op has to be 0.
+

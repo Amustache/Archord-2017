@@ -27,7 +27,15 @@ begin
 				current <= (others => '0');
 			else
 				if(en = '1') then -- Next addr
-					current <= std_logic_vector(unsigned(current) + 4);
+					if(sel_a = '1') then
+						current <= std_logic_vector(unsigned(a));
+					elsif(sel_imm = '1') then
+						current <= std_logic_vector(shift_left(unsigned(imm), 2));
+					elsif(add_imm = '1') then
+						current <= std_logic_vector(unsigned(current) + unsigned(imm));
+					else
+						current <= std_logic_vector(unsigned(current) + 4);
+					end if;
 				end if;
 			end if;
 		end if;

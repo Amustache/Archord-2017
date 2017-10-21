@@ -1,12 +1,15 @@
 
 State Machine - |GECKO|CPU:inst|controller:controller_0|currentState
-Name currentState.i_op currentState.load2 currentState.load1 currentState.break currentState.store currentState.r_op currentState.decode currentState.fetch2 currentState.fetch1 
-currentState.fetch1 0 0 0 0 0 0 0 0 0 
-currentState.fetch2 0 0 0 0 0 0 0 1 1 
-currentState.decode 0 0 0 0 0 0 1 0 1 
-currentState.r_op 0 0 0 0 0 1 0 0 1 
-currentState.store 0 0 0 0 1 0 0 0 1 
-currentState.break 0 0 0 1 0 0 0 0 1 
-currentState.load1 0 0 1 0 0 0 0 0 1 
-currentState.load2 0 1 0 0 0 0 0 0 1 
-currentState.i_op 1 0 0 0 0 0 0 0 1 
+Name currentState.jmp currentState.call currentState.branch currentState.i_op currentState.load2 currentState.load1 currentState.break currentState.store currentState.r_op currentState.decode currentState.fetch2 currentState.fetch1 
+currentState.fetch1 0 0 0 0 0 0 0 0 0 0 0 0 
+currentState.fetch2 0 0 0 0 0 0 0 0 0 0 1 1 
+currentState.decode 0 0 0 0 0 0 0 0 0 1 0 1 
+currentState.r_op 0 0 0 0 0 0 0 0 1 0 0 1 
+currentState.store 0 0 0 0 0 0 0 1 0 0 0 1 
+currentState.break 0 0 0 0 0 0 1 0 0 0 0 1 
+currentState.load1 0 0 0 0 0 1 0 0 0 0 0 1 
+currentState.load2 0 0 0 0 1 0 0 0 0 0 0 1 
+currentState.i_op 0 0 0 1 0 0 0 0 0 0 0 1 
+currentState.branch 0 0 1 0 0 0 0 0 0 0 0 1 
+currentState.call 0 1 0 0 0 0 0 0 0 0 0 1 
+currentState.jmp 1 0 0 0 0 0 0 0 0 0 0 1 
