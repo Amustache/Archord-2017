@@ -40,5 +40,6 @@ begin
 		end if;
 	end process;
 	
-	addr <= current;
+	addr <= ((31 downto 16 => '0') & current(15 downto 0)) and
+		((31 downto 2 => '1') & "00");
 end synth;
