@@ -8,3 +8,5 @@ Let's rule!
 ## lab02: Register File and Memories (RAM, ROM)
 
 ## lab03: Designing a Multicycle Processor
+
+## lab04: A Pong Game in Assembly Language
