@@ -1,0 +1,72 @@
+# Authors: Hugo Hueber & Florine Reau
+# Date:	  28/11/2017
+# Notes: 
+#           - Only allowed procedure names: clear_leds, set_pixel, move_ball,
+#               move_paddles, draw_paddles, hit_test, display_score
+#           - Only one file, pong.asm
+#           - Each procedure must be enclosed with
+#                   ; BEGIN:procedure_name
+#               and
+#                   ; END:procedure_name
+#           - 0x1000: Ball position on x-axis
+#               0x1004: Ball position on y-axis
+#               0x1008: Ball velocity along x-axis
+#               0x100C: Ball velocity along y-axis
+#           - 0x1010: Paddle 1 position (left)
+#               0x1014: Paddle 2 position (right)
+#           - 0x1018: Score of player 1 (left)
+#               0x101C: Score of player 2 (right)
+
+# symbolic constants
+.equ BALL,      0x1000 # ball state (its position and velocity)
+.equ PADDLES,   0x1010 # paddles position
+.equ SCORES,    0x1018 # game scores
+.equ LEDS,      0x2000 # LED addresses
+.equ BUTTONS,   0x2030 # Button addresses
+
+; BEGIN:main
+main:
+    call clear_leds
+    addi a0, zero, 5
+    addi a1, zero, 3
+    ret
+; END:main
+
+; BEGIN:clear_leds
+clear_leds:
+    ; your implementation code
+    stw zero, LEDS (zero)           # reset leds[0]
+    stw zero, LEDS+4 (zero)         # reset leds[1]
+    stw zero, LEDS+8 (zero)         # reset leds[2]
+    ret
+; END:clear_leds
+
+; BEGIN:set_pixel
+set_pixel:
+    ; your implementation code
+    # Store a0, a1 in the stack
+    addi sp, sp, -8
+    stw a0, 4 (sp)
+    stw a1, 0 (sp)
+    
+    # Which word should we use
+    andi t0, a0, 12                 # t0 = a0 and "1100"
+    srli t0, t0, 2                  # t0 = t0 / 4 = a0 / 4
+    
+    # Which bit should we set
+    andi t1, a0, 3                  # t1 = a0 and "0011"
+    slli t1, t1, 3                  # t1 = t1 * 8 = (a0 % 4) * 8
+    addi t1, t1, a1                 # t1 = t1 + a1 = a0 * 8 + a1
+    
+    # Set the bit
+    addi t2, zero, 1                # t2 = 1
+    sll t2, t2, t1                  # t2 = t2 * (2 ^ t1) := mask
+    ldw t3, LEDS (t0)               # t3 = leds[t0]
+    or t3, t3, t2                   # t3 = t3 or t2 = leds[t0] or mask
+    stw t3, LEDS (t0)               # leds[t0] = t3 = leds[t0] or mask
+    
+    # Load a0, a1 from the stack
+    ldw a1, 0 (sp)
+    ldw a0, 4 (sp)
+    ret
+; END:set_pixel
