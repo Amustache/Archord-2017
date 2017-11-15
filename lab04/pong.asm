@@ -23,27 +23,34 @@
 .equ SCORES,        0x1018  # Game scores
 .equ LEDS,          0x2000  # LED addresses
 .equ BUTTONS,       0x2030  # Button addresses
-.equ INITX,         3       # Initial ball x position
-.equ INITY,         1       # Initial ball y position
-.equ INITXSPEED,    1       # Initial ball x velocity
-.equ INITYSPEED,    -1      # Initial ball y velocity
 
 ; BEGIN:main
 main:
     # Initializations
     # Init stack
     addi sp, zero, LEDS
+    
+    # Init scores
+    stw zero, SCORES (zero)
+    stw zero, SCORES+4 (zero)
+    
+    call display_score
+    call wait
+    call wait
+    call wait
+    call wait
+    call wait
 init:
     # Init ball x and y
-    addi t0, zero, INITX
+    addi t0, zero, 4
     stw t0, BALL (zero)
-    addi t0, zero, INITY
+    addi t0, zero, 4
     stw t0, BALL+4 (zero)
 
     # Init ball velocity
-    addi t0, zero, INITXSPEED
+    addi t0, zero, -1
     stw t0, BALL+8 (zero)
-    addi t0, zero, INITYSPEED
+    addi t0, zero, -1
     stw t0, BALL+12 (zero)
     
     # Init paddles
@@ -52,14 +59,20 @@ init:
     addi t0, zero, 4
     stw t0, PADDLES+4 (zero)
     
+    # Init winner
+    add v0, zero, zero
+    
     # Round
 round:
-    call clear_leds
+    call hit_test
+    bne v0, zero, scored 
     
     call move_paddles
-    call draw_paddles
     
     call move_ball
+    
+    call clear_leds
+    call draw_paddles
     
     # Draw ball
     ldw t0, BALL (zero)
@@ -68,25 +81,32 @@ round:
     add a1, zero, t1
     call set_pixel
     
-    call hit_test
-    beq v0, zero, round
+    call wait
+    br round
     
     # Someone scored
 scored:
-    addi t0, zero, v0               # t0 = who scored
-    slli t0, t0, 2
-    ldw t1, SCORES (t0)
-    addi t1, t1, 1
-    stw t1, SCORES (t0)             # Whoever scored gets +1
+    add t0, zero, v0                # t0 = who scored
+    addi t0, t0, -1                 # t0 -= 1
+    slli t0, t0, 2                  # t0 *= 4
+    # Why a0? So we can use it with the end game.
+    ldw a0, SCORES (t0)             # Player1 = 0, Player2 = 4
+    addi a0, a0, 1
+    stw a0, SCORES (t0)             # Whoever scored gets +1
     
     call display_score              # Brags about the score
+    call wait
+    call wait
+    call wait
+    call wait
+    call wait
     
     addi t0, zero, 10
-    blt t1, t0, round               # if(score < 10) then goto init
+    blt a0, t0, init                # if(score < 10) then goto init
     
     # End of the game
 end:
-    ret
+    br main
 ; END:main
 
 ; BEGIN:clear_leds
@@ -134,33 +154,99 @@ set_pixel:
 ; BEGIN:hit_test
 hit_test:
     ; your implementation code
-    # Check for x-axis
-hit_text_x:
+    # Loads
     ldw t0, BALL (zero)             # t0 = ball.x
-    cmpeqi t2, t0, 0                # t2 = ball.x == 0
-    beq t2, zero, hit_test_x_1      # if(ball.x != 0) goto hit_test_x_1
-    addi t2, zero, 1
-    stw t2, BALL+8 (zero)           # else ball.xspeed = 1
-hit_test_x_1:
-    cmpeqi t2, t0, 11               # t2 = ball.x == 11
-    beq t2, zero, hit_test_y        # if(ball.x != 11) goto hit_test_y
-    addi t2, zero, -1
-    stw t2, BALL+8 (zero)           # else ball.xspeed = -1
+    ldw t1, BALL+4 (zero)           # t1 = ball.y
+    ldw t2, BALL+8 (zero)           # t2 = ball.xspeed    
+    ldw t3, BALL+12 (zero)          # t3 = ball.yspeed
+    add t4, zero, zero              # t4 = temp
     
-    # Check for y-axis
-hit_test_y:
-    ldw t0, BALL+4 (zero)           # t0 = ball.y
-    cmpeqi t2, t0, 0                # t2 = ball.y == 0
-    beq t2, zero, hit_test_y_1      # if(ball.y != 0) goto hit_test_y_1
-    addi t2, zero, 1
-    stw t2, BALL+12 (zero)          # else ball.yspeed = 1
-hit_test_y_1:
-    cmpeqi t2, t0, 7                # t2 = ball.y == 7
-    beq t2, zero, hit_test_end      # if(ball.y != 7) goto hit_test_end
-    addi t2, zero, -1
-    stw t2, BALL+12 (zero)          # else ball.yspeed = -1
+    # Check for y-axis (top, bottom)
+hit_test_y_top:
+    cmpeqi t4, t1, 0                # t4 = (ball.y == 0)
+    beq t4, zero, hit_test_y_bottom # if(ball.y != 0) goto hit_test_y_bottom
+    addi t3, zero, 1                # else ball.yspeed = 1
+    br hit_test_x_left
+hit_test_y_bottom:
+    cmpeqi t4, t1, 7                # t4 = (ball.y == 7)
+    beq t4, zero, hit_test_x_left   # if(ball.y != 7) goto hit_test_x_left
+    addi t3, zero, -1               # else ball.yspeed = -1
+    
+    # Check for x-axis (left)
+hit_test_x_left:
+hit_test_x_left_b:
+    cmpeqi t4, t0, 1                # t4 = (ball.x == 1)
+    beq t4, zero, hit_test_x_right  # if(ball.x != 1) goto hit_test_x_right
+    ldw t5, PADDLES (zero)          # else t5 = paddle1.center
+    addi t5, t5, -2                 #   t5 = paddle1.bottom - 1
+    cmplt t4, t1, t5                #   t4 = (ball.y < paddle1.bottom - 1)
+    bne t4, zero, hit_test_2_wins   #   if(ball.y < paddle1.bottom - 1) goto hit_test_2_wins
+    cmpeq t4, t1, t5                #   else t4 = (ball.y == paddle1.bottom - 1)
+    beq t4, zero, hit_test_x_left_t #       if(ball.y > paddle1.bottom - 1) goto hit_test_x_left_t
+    add t4, t1, t3                  #       else t4 = ball.y.next
+    addi t5, t5, 1                  #           t5 = paddle1.bottom
+    cmpeq t4, t4, t5                #           t4 = (ball.y.next == paddle1.bottom)
+    beq t4, zero, hit_test_2_wins   #           if(ball.y.next != paddle1.bottom) goto hit_test_2_wins
+    addi t3, zero, -1               #           else ball.yspeed = -1
+    br hit_test_x_left_e
+hit_test_x_left_t:
+    addi t5, t5, 5                  # t5 = paddle1.top + 2
+    cmpge t4, t1, t5                # t4 = (ball.y > paddle1.bottom + 1)
+    bne t4, zero, hit_test_2_wins   # if(ball.y > paddle1.bottom + 1) goto hit_test_2_wins
+    addi t5, t5, -1                 # else t5 = paddle1.top + 1
+    cmpeq t4, t1, t5                #   t4 = (ball.y == paddle1.bottom + 1)
+    beq t4, zero, hit_test_x_left_e #   if(ball.y < paddle1.bottom + 1) goto hit_test_x_left_e
+    add t4, t1, t3                  #   else t4 = ball.y.next
+    addi t5, t5, -1                 #      t5 = paddle1.top
+    cmpeq t4, t4, t5                #      t4 = (ball.y.next == paddle1.bottom)
+    beq t4, zero, hit_test_2_wins   #      if(ball.y.next != paddle1.top) goto hit_test_2_wins
+    addi t3, zero, 1               #      else ball.yspeed = 1
+hit_test_x_left_e:
+    addi t2, zero, 1                # Hit the paddle
+    br hit_test_x_right
+hit_test_2_wins:
+    addi v0, zero, 2
+    ret
+    
+    # Check for x-axis (right)
+hit_test_x_right:
+hit_test_x_right_b:
+    cmpeqi t4, t0, 10               # t4 = (ball.x == 10)
+    beq t4, zero, hit_test_end      # if(ball.x != 10) goto hit_test_end
+    ldw t5, PADDLES+4 (zero)        # else t5 = paddle2.center
+    addi t5, t5, -2                 #   t5 = paddle2.bottom - 1
+    cmplt t4, t1, t5                #   t4 = (ball.y < paddle2.bottom - 1)
+    bne t4, zero, hit_test_1_wins   #   if(ball.y < paddle2.bottom - 1) goto hit_test_1_wins
+    cmpeq t4, t1, t5                #   else t4 = (ball.y == paddle2.bottom - 1)
+    beq t4, zero, hit_test_x_right_t#       if(ball.y > paddle2.bottom - 1) goto hit_test_x_right_t
+    add t4, t1, t3                  #       else t4 = ball.y.next
+    addi t5, t5, 1                  #           t5 = paddle2.bottom
+    cmpeq t4, t4, t5                #           t4 = (ball.y.next == paddle2.bottom)
+    beq t4, zero, hit_test_1_wins   #           if(ball.y.next != paddle2.bottom) goto hit_test_1_wins
+    addi t3, zero, -1               #           else ball.yspeed = -1
+    br hit_test_x_right_e
+hit_test_x_right_t:
+    addi t5, t5, 5                  # t5 = paddle2.top + 2
+    cmpge t4, t1, t5                # t4 = (ball.y > paddle2.bottom + 1)
+    bne t4, zero, hit_test_1_wins   # if(ball.y > paddle2.bottom + 1) goto hit_test_1_wins
+    addi t5, t5, -1                 # else t5 = paddle2.top + 1
+    cmpeq t4, t1, t5                #   t4 = (ball.y == paddle2.bottom + 1)
+    beq t4, zero, hit_test_x_right_e#   if(ball.y < paddle2.bottom + 1) goto hit_test_x_right_e
+    add t4, t1, t3                  #   else t4 = ball.y.next
+    addi t5, t5, -1                 #      t5 = paddle2.top
+    cmpeq t4, t4, t5                #      t4 = (ball.y.next == paddle2.bottom)
+    beq t4, zero, hit_test_1_wins   #      if(ball.y.next != paddle2.top) goto hit_test_1_wins
+    addi t3, zero, 1                #      else ball.yspeed = 1
+hit_test_x_right_e:
+    addi t2, zero, -1               # Hit the paddle
+    br hit_test_end
+hit_test_1_wins:
+    addi v0, zero, 1
+    ret
     
 hit_test_end:
+    stw t2, BALL+8 (zero)           # ball.xspeed = t2
+    stw t3, BALL+12 (zero)          # ball.yspeed = t3
     ret
 ; END:hit_test
 
@@ -320,3 +406,18 @@ display_score:
     
     ret
 ; END:display_score
+
+; BEGIN:wait
+wait:
+    ; your implementation code
+    addi t0, zero, 0x2EB
+wait_down:
+    addi t1, zero, 0x695
+wait_inner:
+    addi t1, t1, -1
+    bne t1, zero, wait_inner
+    
+    addi t0, t0, -1
+    bne t0, zero, wait_down
+    ret
+; END:wait
