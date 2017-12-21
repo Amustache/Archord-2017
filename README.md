@@ -23,9 +23,9 @@ Not graded, but 94%
 ## lab03: Designing a Multicycle Processor
 _In this lab you will implement a multicycle Nios II processor. You will implement it step-by-step—beginning with a CPU that executes a few basic instructions and extending it progressively to cover all the requested functionalities of the Nios II. You will also use some of the components you built in the previous sessions._
 
-Final grade: 100%
+Grade: 100%
 
 ## lab04: A Pong Game in Assembly Language
 _During this lab,  you will implement a simplified version of the well-known Pong game in assembly language. At the end of the lab, you should be able to play the game on the Gecko4EPFL._
 
-Final grade: 97%
+Grade: 97%
