@@ -34,17 +34,17 @@ main:
     stw zero, SCORES (zero)
     stw zero, SCORES+4 (zero)
     
-    call display_score
-    call wait
-    call wait
-    call wait
-    call wait
-    call wait
+    ;call display_score
+   ; call wait
+   ; call wait
+  ; call wait
+  ;  call wait
+  ;  call wait
 init:
     # Init ball x and y
-    addi t0, zero, 4
+    addi t0, zero, 2
     stw t0, BALL (zero)
-    addi t0, zero, 4
+    addi t0, zero, 1
     stw t0, BALL+4 (zero)
 
     # Init ball velocity
@@ -54,9 +54,9 @@ init:
     stw t0, BALL+12 (zero)
     
     # Init paddles
-    addi t0, zero, 3
+    addi t0, zero, 2
     stw t0, PADDLES (zero)
-    addi t0, zero, 4
+    addi t0, zero, 5
     stw t0, PADDLES+4 (zero)
     
     # Init winner
@@ -67,21 +67,21 @@ round:
     call hit_test
     bne v0, zero, scored 
     
-    call move_paddles
+   ; call move_paddles
     
     call move_ball
     
-    call clear_leds
-    call draw_paddles
+  ;  call clear_leds
+ ;   call draw_paddles
     
     # Draw ball
-    ldw t0, BALL (zero)
-    add a0, zero, t0
-    ldw t1, BALL+4 (zero)
-    add a1, zero, t1
-    call set_pixel
+;    ldw t0, BALL (zero)
+ ;   add a0, zero, t0
+ ;   ldw t1, BALL+4 (zero)
+  ;  add a1, zero, t1
+  ;  call set_pixel
     
-    call wait
+  ;  call wait
     br round
     
     # Someone scored
@@ -165,12 +165,12 @@ hit_test:
 hit_test_y_top:
     cmpeqi t4, t1, 0                # t4 = (ball.y == 0)
     beq t4, zero, hit_test_y_bottom # if(ball.y != 0) goto hit_test_y_bottom
-    addi t3, zero, 1                # else ball.yspeed = 1
+    sub t3, zero, t3                # else ball.yspeed = -ball.yspeed
     br hit_test_x_left
 hit_test_y_bottom:
     cmpeqi t4, t1, 7                # t4 = (ball.y == 7)
     beq t4, zero, hit_test_x_left   # if(ball.y != 7) goto hit_test_x_left
-    addi t3, zero, -1               # else ball.yspeed = -1
+    sub t3, zero, t3                # else ball.yspeed = -ball.yspeed
     
     # Check for x-axis (left)
 hit_test_x_left:
@@ -187,7 +187,7 @@ hit_test_x_left_b:
     addi t5, t5, 1                  #           t5 = paddle1.bottom
     cmpeq t4, t4, t5                #           t4 = (ball.y.next == paddle1.bottom)
     beq t4, zero, hit_test_2_wins   #           if(ball.y.next != paddle1.bottom) goto hit_test_2_wins
-    addi t3, zero, -1               #           else ball.yspeed = -1
+    sub t3, zero, t3                #           else ball.yspeed = -ball.yspeed
     br hit_test_x_left_e
 hit_test_x_left_t:
     addi t5, t5, 5                  # t5 = paddle1.top + 2
@@ -200,9 +200,9 @@ hit_test_x_left_t:
     addi t5, t5, -1                 #      t5 = paddle1.top
     cmpeq t4, t4, t5                #      t4 = (ball.y.next == paddle1.bottom)
     beq t4, zero, hit_test_2_wins   #      if(ball.y.next != paddle1.top) goto hit_test_2_wins
-    addi t3, zero, 1               #      else ball.yspeed = 1
+    sub t3, zero, t3                #      else ball.yspeed = -ball.yspeed
 hit_test_x_left_e:
-    addi t2, zero, 1                # Hit the paddle
+    sub t2, zero, t2                # ball.xspeed = -ball.xspeed
     br hit_test_x_right
 hit_test_2_wins:
     addi v0, zero, 2
@@ -223,7 +223,7 @@ hit_test_x_right_b:
     addi t5, t5, 1                  #           t5 = paddle2.bottom
     cmpeq t4, t4, t5                #           t4 = (ball.y.next == paddle2.bottom)
     beq t4, zero, hit_test_1_wins   #           if(ball.y.next != paddle2.bottom) goto hit_test_1_wins
-    addi t3, zero, -1               #           else ball.yspeed = -1
+    sub t3, zero, t3                #           else ball.yspeed = -ball.yspeed
     br hit_test_x_right_e
 hit_test_x_right_t:
     addi t5, t5, 5                  # t5 = paddle2.top + 2
@@ -236,9 +236,9 @@ hit_test_x_right_t:
     addi t5, t5, -1                 #      t5 = paddle2.top
     cmpeq t4, t4, t5                #      t4 = (ball.y.next == paddle2.bottom)
     beq t4, zero, hit_test_1_wins   #      if(ball.y.next != paddle2.top) goto hit_test_1_wins
-    addi t3, zero, 1                #      else ball.yspeed = 1
+    sub t3, zero, t3                #      else ball.yspeed = -ball.yspeed
 hit_test_x_right_e:
-    addi t2, zero, -1               # Hit the paddle
+    sub t2, zero, t2                # ball.xspeed = -ball.xspeed
     br hit_test_end
 hit_test_1_wins:
     addi v0, zero, 1
